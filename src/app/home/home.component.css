@@ -1,0 +1,9 @@
+.header {
+    margin: 0 10px;
+}
+
+.header p {
+    margin: 20px 0;
+    font-size: 30px;
+    text-align: center;
+}

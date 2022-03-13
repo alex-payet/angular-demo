@@ -1,0 +1,85 @@
+.card-face {
+    width: 300px;
+    height: 200px;
+    background-color: #d7dbdb;
+    /* background: linear-gradient(45deg, rgba(22, 167, 175, 0.6) 5%, rgba(23, 27, 158, 0.7) 55%, rgba(68, 9, 82, 0.5) 100%) no-repeat; */
+}
+
+.title {
+    color: #2E3C40;
+    font-size: 2.5em;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 0.5em;
+    margin: 0 0 0.142857143em;
+    border-bottom: 4px solid #381bb9;
+}
+
+.clickable:hover {
+    cursor: pointer;
+    transition: border-bottom 0.6 linear;
+    border-bottom: 4px solid #bd6615;
+}
+
+.info {
+    padding: 0 20px;
+}
+
+ol {
+    counter-reset: li;
+    /* Initiate a counter */
+    list-style: none;
+    /* Remove default numbering */
+    list-style: decimal;
+    /* Keep using default numbering for IE6/7 */
+    font: 15px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+ol ol {
+    margin: 0 0 0 2em;
+    /* Add some left margin for inner lists */
+}
+
+.rounded-list span {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;
+}
+
+.rounded-list span:hover {
+    background: #eee;
+}
+
+.rounded-list span:hover:before {
+    transform: rotate(360deg);
+}
+
+.rounded-list span:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #87ceeb;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}

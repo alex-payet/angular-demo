@@ -1,0 +1,15 @@
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            {{chapter.title}}
+        </mat-panel-title>
+        <mat-panel-description>
+            {{chapter.description}}
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <div fxLayout="row wrap" fxLayoutAlign="space-evenly center">
+        <apt-card *ngFor="let topic of chapter.topics" [topic]="topic"></apt-card>
+        <!-- <apt-card-simple *ngFor="let topic of chapter.topics" [topic]="topic"></apt-card-simple> -->
+    </div>
+</mat-expansion-panel>

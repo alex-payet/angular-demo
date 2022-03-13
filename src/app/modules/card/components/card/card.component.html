@@ -1,0 +1,10 @@
+<div class="card" [ngClass]="{'selected' :selected }">
+    <div class="content">
+        <div class="card-front" (click)="toggle()">
+            <apt-card-logo [logo]="topic.logo"></apt-card-logo>
+        </div>
+        <div class="card-back">
+            <apt-card-face [topic]="topic"></apt-card-face>
+        </div>
+    </div>
+</div>

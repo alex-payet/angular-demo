@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Chapter } from '../core/model/chapter.model';
+import { ChapterFactoryService } from '../core/services/chapter-factory.service';
 
 @Component({
   selector: 'apt-home',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public chapters : Array<Chapter>= [];
+  
+  constructor(private chapterFactory : ChapterFactoryService) { }
 
   ngOnInit(): void {
+    this.chapters = this.chapterFactory.get();
   }
 
 }

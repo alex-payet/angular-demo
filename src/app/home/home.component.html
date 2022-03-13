@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div fxLayout="column">
+
+    <div class="header" fxFlex="30">
+        <p>ANGULAR DEMO</p>
+    </div>
+
+    <div class="content" fxFlex="60">
+        <mat-accordion>
+            <apt-card-container *ngFor="let chapter of chapters" [chapter]="chapter"></apt-card-container>
+        </mat-accordion>
+    </div>
+
+    <div class="footer" fxFlex="10">
+
+    </div>
+</div>

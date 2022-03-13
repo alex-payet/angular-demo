@@ -1,0 +1,10 @@
+<div class="card-face" fxLayout="column" (click)="open()">
+    <div class="title" fxFlex="20" [ngClass]="{'clickable' : topic.example}">
+        <p>{{title}}</p>
+    </div>
+    <div class="info" fxFlex="80">
+        <ol class="rounded-list">
+            <li *ngFor="let info of topic.infos"><span>{{info}}</span></li>
+        </ol>
+    </div>
+</div>
