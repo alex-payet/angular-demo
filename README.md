@@ -88,3 +88,9 @@ Fichier de configuration pour les test [Karma](https://angular.io/guide/testing)
 
 4. #### *.spec.ts* **(Test)**
 
+## Exécuter avec docker
+
+## Build
+```
+docker build -t angular-demo-image .
+```
