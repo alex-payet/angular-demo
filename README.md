@@ -94,3 +94,8 @@ Fichier de configuration pour les test [Karma](https://angular.io/guide/testing)
 ```
 docker build -t angular-demo-image .
 ```
+
+## Démarrage du container Nginx avec l'application
+```
+ docker run -d --name "angular-demo" -p 8181:80 angular-demo-image
+```
