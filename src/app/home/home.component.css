@@ -1,9 +1,22 @@
+.main-container {
+    padding: 0 20px;
+}
+
 .header {
     margin: 0 10px;
 }
 
-.header p {
+.header h1 {
     margin: 20px 0;
     font-size: 30px;
     text-align: center;
+}
+
+.accordion-action-buttons {
+    padding-bottom: 20px;
+    height: 40px;
+}
+
+.accordion-action-buttons button {
+    float: right;
 }

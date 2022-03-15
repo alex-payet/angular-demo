@@ -1,1 +1,100 @@
-<p>html-balise works!</p>
+<div>
+    <h1 mat-dialog-title>HTML - Les balises</h1>
+
+    <div mat-dialog-content fxLayout="column">
+        <mat-tab-group mat-align-tabs="start">
+            <mat-tab label="Structure">
+                <pre><code [highlight]="structure" [languages]="['html']"></code></pre>
+            </mat-tab>
+            <mat-tab label="Générique">
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="50">
+                        <pre><code [highlight]="div" [languages]="['html']"></code></pre>
+                    </div>
+                    <div fxFlex="50">
+                        <div style="border: solid;">Trap l'un</div>
+                        <div style="border: solid;">Trap l'autre</div>
+                    </div>
+                </div>
+
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="50">
+                        <pre><code [highlight]="span" [languages]="['html']"></code></pre>
+                    </div>
+                    <div fxFlex="50">
+                        <span style="border: solid;">Trap l'un</span>
+                        <span style="border: solid;">Trap l'autre</span>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Tableau">
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="50">
+                        <pre><code [highlight]="table" [languages]="['html']"></code></pre>
+                    </div>
+                    <div fxFlex="50">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Col. 1</th>
+                                    <th>Col. 2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ligne 1 Col 1</td>
+                                    <td>Ligne 1 Col 2</td>
+                                </tr>
+                                <tr>
+                                    <td>Ligne 2 Col 1</td>
+                                    <td>Ligne 2 Col 2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Formulaire">
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="50">
+                        <pre><code [highlight]="form" [languages]="['html']"></code></pre>
+                    </div>
+                    <div fxFlex="50">
+                        <form>
+                            <div class="form-padding" fxLayout="row">
+                                <div fxFlex="50"><label style="float:right;" for="name">Rent' out nom: </label></div>
+                                <div fxFlex="50"><input id="name" type="text" required></div>
+                            </div>
+                            <div class="form-padding">
+                                <div fxFlex="50"><label style="float:right;" for="pwd">Met' out pass: </label></div>
+                                <div fxFlex="50"><input id="pwd" type="password" required></div>
+                            </div>
+                            <div class="form-padding">
+                                <div fxFlex="50"><label style="float:right;" for="age">Kel age ou la n'as ?</label></div>
+                                <div fxFlex="50"><input id="age" type="number" min="10" max="100"></div>
+                            </div>
+                            <div class="form-padding">
+                                <div fxFlex="50"><label style="float:right;" for="picture">Met' out tête ici</label></div>
+                                <div fxFlex="50"><input id="picture" type="file"></div>
+                            </div>
+                            <div class="form-padding">
+                                <div fxFlex="50"><label style="float:right;" for="tantine">Ou ça va rôde ki ?</label></div>
+                                <div fxFlex="50">
+                                    <select id="tantine">
+                                    <option>Blonde</option>
+                                    <option>Brune</option>
+                                    <option>Yab</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+
+    <div mat-dialog-actions>
+
+    </div>
+</div>

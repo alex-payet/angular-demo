@@ -7,26 +7,26 @@ import { Chapter, Topic , CardKey} from '../model/chapter.model';
 export class ChapterFactoryService {
 
 
-  private b: ChapterBuilder = new ChapterBuilder();
+  private builder: ChapterBuilder = new ChapterBuilder();
 
   constructor() {
     this.build();
   }
 
   get(): Array<Chapter> {
-    return this.b.get();
+    return this.builder.get();
   }
 
   private build(): void {
-    this.b.create('Installation', 'Logiciel & Co.')
+    this.builder.create('Installation', 'Logiciel & Co.')
       .add('node', ['V8 : JavaScript open-source', 'Exécution côté serveur'], false)
       .add('npm', ['Gestionnaire de paquet', 'npm install -g @angular/cli', 'alias : npm -i *paquet*'])
       .add('angular-project', ['ng new project-name', 'ng -generate ...'])
       .add('chrome', ['Chromuim', 'Chromuim/Edge'], false)
-      .add('ide', ['Visual Studio Code', 'IntelliJ', 'Eclipse', 'Netbean'], false)
+      .add('ide', ['Visual Studio Code', 'IntellJ', 'Eclipse', 'Netbean'], false)
       .flush()
       .create('Prérequis', 'Quelques notions ... de base')
-      .add('html-balise', ['Génériques', 'Tableau', 'Formulaire'])
+      .add('html-balise', ['Structure', 'Génériques', 'Tableau', 'Formulaire'])
       .add('css', ['Selecteurs', 'Types'])
       .add('javascript', ['Variables', 'Fonction'])
       .add('typescript', ['Variables', 'Fonction'])

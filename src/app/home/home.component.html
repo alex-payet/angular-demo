@@ -1,16 +1,36 @@
-<div fxLayout="column">
+<!DOCTYPE html>
+<html>
 
-    <div class="header" fxFlex="30">
-        <p>ANGULAR DEMO</p>
+<head>
+    <title>ANGULAR DEMO - SII</title>
+</head>
+
+<body>
+    <div class="main-container" fxLayout="column">
+
+        <div class="header" fxFlex="30">
+            <h1>ANGULAR DEMO</h1>
+        </div>
+
+        <div class="content" fxFlex="60">
+
+            <div class="accordion-action-buttons">
+                <button *ngIf="!open" mat-raised-button color="primary" (click)="toggle()">Open All</button>
+                <button *ngIf="open" mat-raised-button color="warn" (click)="toggle()">Collapse All</button>
+            </div>
+            <div>
+                <mat-accordion multi>
+                    <apt-card-container *ngFor="let chapter of chapters" [chapter]="chapter"></apt-card-container>
+                </mat-accordion>
+            </div>
+
+        </div>
+
+        <div class="footer" fxFlex="10">
+            <!-- <pre><code [highlight]="code"></code></pre> -->
+        </div>
     </div>
 
-    <div class="content" fxFlex="60">
-        <mat-accordion>
-            <apt-card-container *ngFor="let chapter of chapters" [chapter]="chapter"></apt-card-container>
-        </mat-accordion>
-    </div>
+</body>
 
-    <div class="footer" fxFlex="10">
-
-    </div>
-</div>
+</html>

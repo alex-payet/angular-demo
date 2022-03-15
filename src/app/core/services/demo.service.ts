@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
 import { CardKey } from 'src/app/core/model/chapter.model';
 
 import { NpmComponent } from '../../modules/demo/components/npm/npm.component';
@@ -20,22 +20,27 @@ export class DemoService {
 
   private _ref: any = null;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog) {
+    // this.open('css');
+   }
 
   open(key: CardKey) {
     this.close();
-
+    const config : MatDialogConfig = {
+      height : '70%',
+      width : '70%'
+    }
     switch (key) {
-      case 'npm': this._ref = this.dialog.open(NpmComponent); break;
-      case 'angular-project': this._ref = this.dialog.open(AngularCmdComponent); break;
-      case 'html-balise': this._ref = this.dialog.open(HtmlBaliseComponent); break;
-      case 'css': this._ref = this.dialog.open(CssComponent); break;
-      case 'javascript': this._ref = this.dialog.open(JavascriptComponent); break;
-      case 'typescript': this._ref = this.dialog.open(TypescriptExampleComponent); break;
-      case 'html': this._ref = this.dialog.open(HtmlBindingComponent); break;
-      case 'component': this._ref = this.dialog.open(ComponentExampleComponent); break;
-      case 'promise': this._ref = this.dialog.open(PromiseExampleComponent); break;
-      case 'rxjs': this._ref = this.dialog.open(RxjsExampleComponent); break;
+      case 'npm': this._ref = this.dialog.open(NpmComponent, config); break;
+      case 'angular-project': this._ref = this.dialog.open(AngularCmdComponent, config); break;
+      case 'html-balise': this._ref = this.dialog.open(HtmlBaliseComponent, config); break;
+      case 'css': this._ref = this.dialog.open(CssComponent, config); break;
+      case 'javascript': this._ref = this.dialog.open(JavascriptComponent, config); break;
+      case 'typescript': this._ref = this.dialog.open(TypescriptExampleComponent, config); break;
+      case 'html': this._ref = this.dialog.open(HtmlBindingComponent, config); break;
+      case 'component': this._ref = this.dialog.open(ComponentExampleComponent, config); break;
+      case 'promise': this._ref = this.dialog.open(PromiseExampleComponent,config); break;
+      case 'rxjs': this._ref = this.dialog.open(RxjsExampleComponent, config); break;
     }
   }
 

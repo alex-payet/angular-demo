@@ -4,11 +4,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button'
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
 import { CardModule } from './modules/card/card.module';
+import { DemoModule } from './modules/demo/demo.module';
 
 @NgModule({
   declarations: [
@@ -21,10 +24,19 @@ import { CardModule } from './modules/card/card.module';
     BrowserAnimationsModule,
     MatExpansionModule,
     MatDialogModule,
+    MatButtonModule,
 
-    CardModule
+    HighlightModule,
+
+    CardModule,
+    DemoModule
   ],
-  providers: [],
+  providers: [{
+    provide: HIGHLIGHT_OPTIONS,
+    useValue: {
+      fullLibraryLoader: () => import('highlight.js'),
+    }
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
