@@ -1,1 +1,44 @@
-<p>javascript works!</p>
+<div>
+    <h1 mat-dialog-title>Javascript</h1>
+
+    <div mat-dialog-content>
+
+        <div class="example-wrapper" fxLayout="column">
+            <div class="title">Les objets</div>
+            <pre><code [highlight]="objJs" [languages]="['javascript']"></code></pre>
+
+            <div class="title">Les variables</div>
+            <div fxLayout="row" fxLayout="center center">
+                <div fxFlex="50">
+                    <pre><code [highlight]="varJs" [languages]="['javascript']"></code></pre>
+                    <pre><code [highlight]="exJs" [languages]="['html']"></code></pre>
+                </div>
+                <div fxFlex="50" class="center">
+                    <div id="varJsDemo"></div>
+                </div>
+            </div>
+            <div class="title">Les fonctions</div>
+            <div fxLayout="row" fxLayout="center center">
+                <div fxFlex="50">
+                    <pre><code [highlight]="fctJs" [languages]="['javascript']"></code></pre>
+                    <pre><code [highlight]="exfctJs" [languages]="['html']"></code></pre>
+                </div>
+                <div fxFlex="50" class="center">
+                    <div id="fctJsDemo"></div>
+                </div>
+            </div>
+            <div class="title">Les évenements</div>
+            <div fxLayout="row" fxLayout="center center">
+                <div fxFlex="50">
+                    <pre><code [highlight]="eventJs" [languages]="['javascript']"></code></pre>
+                    <pre><code [highlight]="exEventJs" [languages]="['html']"></code></pre>
+                </div>
+                <div fxFlex="50" class="center">
+                    <div id="eventJsDemo">0</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

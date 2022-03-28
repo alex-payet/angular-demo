@@ -18,4 +18,6 @@ export class Topic {
 export type CardKey = 'empty' | 'node' | 'npm' | 'angular'
     | 'chrome' | 'ide' | 'html' | 'css' | 'javascript' | 'typescript'
     | 'project' | 'component' | 'test' | 'promise' | 'rxjs'
-    | 'angular-project' | 'html-balise';
+    | 'angular-project' | 'component-detailed';
+
+    

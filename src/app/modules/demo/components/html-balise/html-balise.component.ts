@@ -11,7 +11,7 @@ export class HtmlBaliseComponent implements OnInit {
   public structure : string  = `<html>
   <head>
     <script>js</script>
-    <style>css</<style>
+    <style>css</style>
     <title>ANGULAR DEMO - SII</title>
   </head>
   <body>...</body>
@@ -51,7 +51,7 @@ export class HtmlBaliseComponent implements OnInit {
     <input id="pwd" type="password" required>
   </div>
   <div>
-    <label for="age">Kel age ou n'as ? </label>
+    <label for="age">Kel age ou na n'as ? </label>
     <input id="age" type="number" min="10" max="100">
   </div>
   <div>
@@ -59,12 +59,15 @@ export class HtmlBaliseComponent implements OnInit {
     <input id="picture" type="file">
   </div>
   <div>
-    <label for="tantine">Ou ça va rôde ki ? </label>
-    <select id="tantine">
-      <option>Blonde</option>
-      <option>Brune</option>
-      <option>Yab</option>
+    <label for="loisir">Koi fé ?</label>
+    <select id="loisir">
+      <option>Batail coq</option>
+      <option>Mange carry</option>
+      <option>Thun mon 106</option>
     </select>
+  </div>
+    <div></div>
+    <div><button><span>Allons rôdé !</span></button></div>
   </div>
 </form>`;
 

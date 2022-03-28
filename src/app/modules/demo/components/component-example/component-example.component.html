@@ -1,1 +1,30 @@
-<p>component-example works!</p>
+<div>
+    <div>
+        <span *ngIf="onChangeData === ''">dynamicInputData :</span>
+        <span *ngIf="onChangeData !== ''">{{onChangeData}}</span>
+        <span>{{dynamicInputData}}</span>
+    </div>
+
+    <div class="boutton-wrapper" fxLayout="row">
+        <div fxFlex="50" *ngIf="!eventExample">
+            <button mat-fab color="primary" (click)="decrement()">
+                <mat-icon>remove</mat-icon> 
+            </button>
+        </div>
+        <div fxFlex="50" *ngIf="!eventExample">
+            <button mat-fab color="primary" (click)="increment()">
+                <mat-icon>add</mat-icon> 
+            </button>
+        </div>
+        <div fxFlex="50" *ngIf="eventExample">
+            <button mat-fab color="warn" (click)="eventAction(false)">
+                <mat-icon>remove</mat-icon> 
+            </button>
+        </div>
+        <div fxFlex="50" *ngIf="eventExample">
+            <button mat-fab color="warn" (click)="eventAction(true)">
+                <mat-icon>add</mat-icon> 
+            </button>
+        </div>
+    </div>
+</div>

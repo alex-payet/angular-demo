@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Chapter } from '../model/chapter.model';
+import { CardKey, Chapter, Topic } from '../model/chapter.model';
 import { ChapterFactoryService } from './chapter-factory.service';
 
 @Injectable({
@@ -7,13 +7,14 @@ import { ChapterFactoryService } from './chapter-factory.service';
 })
 export class ChapterService {
 
-  private _data : Array<Chapter>;
+  private _datas : Array<Chapter>;
 
   constructor(private factory: ChapterFactoryService) { 
-    this._data = this.factory.get();
+    this._datas = this.factory.get();
   }
 
-  get data( ) : Array<Chapter> {
-    return this._data;
+  get datas( ) : Array<Chapter> {
+    return this._datas;
   }
+
 }

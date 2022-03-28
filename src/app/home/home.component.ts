@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   constructor(private chapterService : ChapterService) { }
 
   ngOnInit(): void {
-    this.chapters = this.chapterService.data;
+    this.chapters = this.chapterService.datas;
   }
 
   toggle() : void {

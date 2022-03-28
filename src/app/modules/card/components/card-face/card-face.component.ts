@@ -19,10 +19,9 @@ export class CardFaceComponent implements OnInit {
     if (this.topic.key == 'angular-project') {
       this.title = "Angular";
     }
-    if (this.topic.key == 'html-balise') {
-      this.title = "Balise";
+    if (this.topic.key == 'component-detailed') {
+      this.title = "Detail";
     }
-
   }
 
   open(): void {

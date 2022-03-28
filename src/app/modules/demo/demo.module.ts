@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import {FormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { MatIconModule } from '@angular/material/icon'
+import {MatButtonModule} from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatTabsModule} from '@angular/material/tabs';
 import { NpmComponent } from './components/npm/npm.component';
@@ -16,6 +18,9 @@ import { ComponentExampleComponent } from './components/component-example/compon
 import { PromiseExampleComponent } from './components/promise-example/promise-example.component';
 import { RxjsExampleComponent } from './components/rxjs-example/rxjs-example.component';
 import { TypescriptExampleComponent } from './components/typescript-example/typescript-example.component';
+import { NyanCatComponent } from './components/nyan-cat/nyan-cat.component';
+import { AngularComponent } from './components/angular/angular.component';
+import { ComponentDetailedComponent } from './components/component-detailed/component-detailed.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,10 @@ import { TypescriptExampleComponent } from './components/typescript-example/type
     ComponentExampleComponent,
     PromiseExampleComponent,
     RxjsExampleComponent,
-    TypescriptExampleComponent
+    TypescriptExampleComponent,
+    NyanCatComponent,
+    AngularComponent,
+    ComponentDetailedComponent
   ],
   imports: [
     CommonModule,
@@ -36,8 +44,11 @@ import { TypescriptExampleComponent } from './components/typescript-example/type
 
     HighlightModule,
     MatIconModule,
+    MatButtonModule,
     MatTabsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [{
     provide: HIGHLIGHT_OPTIONS,

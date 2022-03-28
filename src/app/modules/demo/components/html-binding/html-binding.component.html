@@ -1,1 +1,110 @@
-<p>html-binding works!</p>
+<div>
+    <h1 mat-dialog-title>Components</h1>
+
+    <div mat-dialog-content>
+        <mat-tab-group mat-align-tabs="start">
+
+            <mat-tab label="Bindings">
+                <div class="example-wrapper" fxLayout="column">
+                    <div class="title">Affichage statique</div>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <div fxFlex="50">
+                            <pre><code [highlight]="staticCode" [languages]="['typescript']"></code></pre>
+                            <pre><code [highlight]="staticTemplate" [languages]="['html']"></code></pre>
+                        </div>
+                        <div fxFlex="50" class="center">
+                            <span>{{staticData}}</span>
+                        </div>
+                    </div>
+
+                    <div class="title">Affichage dynamique</div>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <div fxFlex="50">
+                            <pre><code [highlight]="dynamicCode" [languages]="['typescript']"></code></pre>
+                            <pre><code [highlight]="dynamicTemplate" [languages]="['html']"></code></pre>
+                        </div>
+                        <div fxFlex="50" class="center">
+                            <span>Count : {{dynamicData}}</span>
+                        </div>
+                    </div>
+
+                    <div class="title">Par propriété</div>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <div fxFlex="50">
+                            <pre><code [highlight]="propertieCode" [languages]="['typescript']"></code></pre>
+                            <pre><code [highlight]="propertieTemplate" [languages]="['html']"></code></pre>
+                            <pre><code [highlight]="propertieParentTemplate" [languages]="['html']"></code></pre>
+                        </div>
+                        <div fxFlex="50" fxLayout="column" fxLayoutAlign="space-around center" class="center-dual">
+                            <span>Parent timer : {{dynamicData}}</span>
+                            <div>
+                                <apt-component-example [dynamicInputData]="dynamicData"></apt-component-example>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="title">Event</div>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <div fxFlex="50">
+                            <pre><code [highlight]="eventCode" [languages]="['typescript']"></code></pre>
+                            <pre><code [highlight]="eventTemplate" [languages]="['html']"></code></pre>
+                            <pre><code [highlight]="eventParentTemplate" [languages]="['html']"></code></pre>
+                            <pre><code [highlight]="eventParentCode" [languages]="['typescript']"></code></pre>
+                        </div>
+                        <div fxFlex="50" fxLayout="column" fxLayoutAlign="space-around center" class="center-dual">
+                            <span>Parent timer : {{dynamicData}}</span>
+                            <div>
+                                <apt-component-example [dynamicInputData]="dynamicData" [eventExample]="true" (changeData)="modifyTimer($event)"></apt-component-example>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="title">Two way [(ngModel)]</div>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <div fxFlex="50">
+                            <pre><code [highlight]="ngModelCode" [languages]="['typescript']"></code></pre>
+                            <pre><code [highlight]="ngModelTemplate" [languages]="['html']"></code></pre>
+                        </div>
+                        <div fxFlex="50" fxLayout="column" fxLayoutAlign="space-around center" class="center-dual">
+                            <span>Parent timer : {{dynamicData}}</span>
+                            <label for="value">Multiple :</label>
+                            <input id="value" [(ngModel)]="value" (ngModelChange)="verify()" placeholder="Valeur">
+                            <div>{{dynamicData}} est multiple de {{value}} => {{result}}</div>
+                        </div>
+                    </div>
+
+                    <div class="title">Template-Driven</div>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <div fxFlex="50">
+                            <pre><code [highlight]="''" [languages]="['typescript']"></code></pre>
+                            <pre><code [highlight]="''" [languages]="['html']"></code></pre>
+                        </div>
+                        <div fxFlex="50" fxLayout="column" fxLayoutAlign="space-around center" class="center-dual">
+
+                        </div>
+                    </div>
+
+                    <div class="title">Query view</div>
+                </div>
+            </mat-tab>
+
+            <mat-tab label="Directive">
+                <div class="example-wrapper" fxLayout="column">
+                    <div class="title">ngIf</div>
+                    <div class="title">ngFor</div>
+                    <div class="title">ngClass</div>
+                    <div class="title">Custom</div>
+                </div>
+            </mat-tab>
+
+            <mat-tab label="Pipes">
+                <div class="example-wrapper" fxLayout="column">
+                    <div class="title">Date</div>
+                    <div class="title">Async</div>
+                    <div class="title">Custom</div>
+                </div>
+            </mat-tab>
+
+        </mat-tab-group>
+    </div>
+</div>

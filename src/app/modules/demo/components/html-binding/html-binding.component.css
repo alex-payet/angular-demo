@@ -1,0 +1,42 @@
+.title {
+    font-size: 20px;
+    color: #409FB3;
+    display: inline-block;
+    height: 30px!important;
+    box-shadow: 0 15px 0 -13px #5cc7a8;
+}
+
+.example-wrapper {
+    padding: 10px;
+}
+
+.center {
+    position: relative;
+}
+
+.center span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    color: darkcyan;
+}
+
+.center div {
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    font-size: 20px;
+    color: darkcyan;
+}
+
+.center-dual div {
+    font-size: 20px;
+    color: darkcyan;
+    padding-top: 40px
+}
+
+.center-dual span {
+    font-size: 20px;
+    color: darkcyan;
+}

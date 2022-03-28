@@ -1,1 +1,116 @@
-<p>css works!</p>
+<div>
+    <h1 mat-dialog-title>CSS</h1>
+
+    <div mat-dialog-content>
+        <mat-tab-group mat-align-tabs="start">
+            <mat-tab label="Sélecteurs">
+                <div fxLayout="column">
+                    <div fxFlex="100" class="title">Sélecteur d'élément</div>
+                    <div fxFlex="100" fxLayout="row" fxLayoutAlign="center center">
+                        <div fxFlex="50">
+                            <pre><code [highlight]="idElement" [languages]="['css']"></code></pre>
+                            <pre><code [highlight]="'<div></div>'" [languages]="['html']"></code></pre>
+                        </div>
+                        <div fxFlex="50" class="element-selector">
+                            <div></div>
+                        </div>
+                    </div>
+                    <div fxFlex="100" class="title">Sélecteur d'ID</div>
+                    <div fxFlex="100" fxLayout="row" fxLayoutAlign="center center">
+                        <div fxFlex="50">
+                            <pre><code [highlight]="idSelector" [languages]="['css']"></code></pre>
+                            <pre><code [highlight]="idExample" [languages]="['html']"></code></pre>
+                        </div>
+                        <div fxFlex="50" class="id-selector">
+                            <div id="myID"></div>
+                        </div>
+                    </div>
+                    <div fxFlex="100" class="title">Sélecteur de classe</div>
+                    <div fxFlex="100" fxLayout="row" fxLayoutAlign="center center">
+                        <div fxFlex="50">
+                            <pre><code [highlight]="classSelector" [languages]="['css']"></code></pre>
+                            <pre><code [highlight]="classExample" [languages]="['html']"></code></pre>
+                        </div>
+                        <div fxFlex="50" class="class-selector">
+                            <div class="myClassSelector"></div>
+                        </div>
+                    </div>
+                    <div fxFlex="100" class="title">Sélecteur d'attribut</div>
+                    <div fxFlex="100" fxLayout="row" fxLayoutAlign="center center">
+                        <div fxFlex="50">
+                            <pre><code [highlight]="attributSelector" [languages]="['css']"></code></pre>
+                            <pre><code [highlight]="attributExample" [languages]="['html']"></code></pre>
+                        </div>
+                        <div fxFlex="50" class="attribut-selector">
+                            <input type="text" />
+                            <input type="number" />
+                        </div>
+                    </div>
+                    <div fxFlex="100" class="title">Sélecteur de pseudo-classe</div>
+                    <div fxFlex="100" fxLayout="row" fxLayoutAlign="center center">
+                        <div fxFlex="50">
+                            <pre><code [highlight]="pseudoClassSelector" [languages]="['css']"></code></pre>
+                            <pre><code [highlight]="'<div></div>'" [languages]="['html']"></code></pre>
+                        </div>
+                        <div fxFlex="50" class="pseudo-class-selector">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+
+            <mat-tab label="Examples">
+
+                <div *ngIf="endOfGameEnable" (click)="toggle()">
+                    <apt-nyan-cat></apt-nyan-cat>
+                </div>
+
+                <div *ngIf="!endOfGameEnable" class="example-wrapper" fxLayout="row wrap" fxLayoutAlign="space-around center">
+
+                    <div fxFlex="25" class="box-example"></div>
+
+                    <div fxFlex="25" class="second-example">
+                        <ul>
+                            <li>Metro</li>
+                            <li>Boulot</li>
+                            <li>Elden RINNNNGGGGG</li>
+                            <li>Dodo</li>
+                        </ul>
+                    </div>
+
+                    <div fxFlex="25" class="button-example">
+                        <button class="button-73" role="button" (click)="toggle()">Don't push</button>
+                    </div>
+
+
+                    <div fxFlex="25" class="first-example">
+                        <div></div>
+                    </div>
+
+
+                </div>
+            </mat-tab>
+
+            <mat-tab label="Frameworks">
+                <div class="example-wrapper" fxLayout="column">
+                    <div class="title">Pour le CSS</div>
+                    <div class="logo-container" fxLayout="row" fxLayout="space-between center">
+                        <div fxFlex="50"><img class="logo" src="assets/img/ico/sass.svg"></div>
+                        <div fxFlex="50"><img class="logo" src="assets/img/ico/less.png"></div>
+                    </div>
+                    <div class="title">Structuration de la page</div>
+                    <div class="logo-container" fxLayout="row" fxLayout="space-between center">
+                        <div fxFlex="50"><img class="logo" src="assets/img/ico/flex.svg"></div>
+                        <div fxFlex="50"><img class="logo" src="assets/img/ico/grid.png"></div>
+                    </div>
+                    <div class="title">Design WEB</div>
+                    <div class="logo-container" fxLayout="row" fxLayout="space-between center">
+                        <div fxFlex="50"><img class="logo" src="assets/img/ico/bootstrap.svg"></div>
+                        <div fxFlex="50"><img class="logo" src="assets/img/ico/angular-material.svg"></div>
+                    </div>
+                </div>
+            </mat-tab>
+
+        </mat-tab-group>
+    </div>
+</div>

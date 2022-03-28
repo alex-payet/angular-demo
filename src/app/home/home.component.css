@@ -20,3 +20,17 @@
 .accordion-action-buttons button {
     float: right;
 }
+
+.content {
+    margin-top: 30px;
+}
+
+.title {
+    margin-top: 25px;
+    font-size: 50px;
+    width: 100%;
+    color: #409FB3;
+    display: inline-block;
+    height: 30px!important;
+    box-shadow: 0 32px 0 -14px #5cc7a8;
+}
