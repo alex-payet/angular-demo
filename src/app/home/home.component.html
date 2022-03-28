@@ -9,7 +9,7 @@
     <div class="main-container" fxLayout="column">
 
         <div class="header" fxFlex="30">
-            <div class="title">ANGULAR DEMO</div>
+            <div class="main-title">ANGULAR DEMO</div>
         </div>
 
         <div class="content" fxFlex="60">
@@ -20,10 +20,7 @@
             </div>
             <div>
                 <mat-accordion multi>
-                    <apt-card-container 
-                      *ngFor="let chapter of chapters"
-                      [chapter]="chapter"
-                    ></apt-card-container>
+                    <apt-card-container *ngFor="let chapter of chapters" [chapter]="chapter"></apt-card-container>
                 </mat-accordion>
             </div>
 

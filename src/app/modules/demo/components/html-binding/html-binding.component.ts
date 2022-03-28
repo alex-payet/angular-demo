@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {interval} from 'rxjs';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import {tap} from 'rxjs/operators';
+import { FormGroup, Validators , FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'apt-html-binding',
@@ -9,10 +10,24 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 })
 export class HtmlBindingComponent implements OnInit {
 
-  constructor() { }
+
+  public formG : FormGroup ;
+  public dataJson : string = "" ;
+
+  constructor(private fb : FormBuilder) {
+    this.formG = this.fb.group({
+      name: ['', Validators.required],
+      pwd: ['', Validators.required],
+      age: ['', [Validators.min(10), Validators.max(99)]],
+      picture: [''],
+      loisir: ['', Validators.required]
+    });
+    
+   }
 
   ngOnInit(): void {
     this.launchTimer();
+    this.formG.valueChanges.subscribe(value => {this.dataJson = JSON.stringify(value,null,'\t')});
   }
 
   private launchTimer(): void {
@@ -123,4 +138,44 @@ public verify() : void {
 public ngModelTemplate: string = `<input id="value" [(ngModel)]="value" (ngModelChange)="verify()" placeholder="Valeur">
 <div>{{dynamicData}} est multiple de {{value} }=> {{result}}</div>`;
 
+public reactiveTemplate: string = `<form [formGroup]="formG">
+
+  <label for="name">Rent' out nom: </label>
+  <input id="name" type="text" formControlName="name">
+
+  <label for="pwd">Met' out pass: </label>
+  <input id="pwd" type="password" required formControlName="pwd">
+
+  <label for="age">Kel age ou la n'as ?</label>
+  <input id="age" type="number" min="10" max="100" formControlName="age">
+
+  <label for="picture">Met' out tête ici</label>
+  <input id="picture" type="file" formControlName="picture">
+
+  <label for="loisir">Koi fé ?</label>
+  <select id="loisir" formControlName="loisir">
+    <option>Batail coq</option>
+    <option>Mange carry</option>
+    <option>Thun mon 106</option>
+  </select>
+  <button [disabled]="!formG.valid"><span>Allons rôdé !</span></button>
+</form>`;
+
+public reactiveCode: string = `  public formG : FormGroup ;
+public dataJson : string = "" ;
+
+constructor(private fb : FormBuilder) {
+  this.formG = this.fb.group({
+    name: ['', Validators.required],
+    pwd: ['', Validators.required],
+    age: ['', [Validators.min(10), Validators.max(99)]],
+    picture: [''],
+    loisir: ['', Validators.required]
+  });
+  
+ }
+ 
+ngOnInit(): void {
+  this.formG.valueChanges.subscribe(value => {this.dataJson = JSON.stringify(value)});
+}`;
 }

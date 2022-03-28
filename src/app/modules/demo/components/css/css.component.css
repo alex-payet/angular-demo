@@ -2,14 +2,6 @@
     margin-top: 10px;
 }
 
-.title {
-    font-size: 20px;
-    color: #409FB3;
-    display: inline-block;
-    height: 30px!important;
-    box-shadow: 0 15px 0 -13px #5cc7a8;
-}
-
 .element-selector,
 .id-selector,
 .class-selector,
@@ -122,6 +114,9 @@ ul li:nth-child(even):hover {
     width: 300px;
     height: 200px;
     /* height: 80%; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 
 .button-example {
@@ -131,7 +126,7 @@ ul li:nth-child(even):hover {
 
 .button-73 {
     appearance: none;
-    background-color: #d41111;
+    background-color: #ffffff;
     border-radius: 40em;
     border-style: none;
     box-shadow: #FF6314 0 -12px 6px inset;
@@ -156,7 +151,7 @@ ul li:nth-child(even):hover {
 }
 
 .button-73:hover {
-    background-color: #d41111;
+    background-color: #ffe1e1;
     box-shadow: #FF6314 0 -6px 8px inset;
     transform: scale(1.125);
 }
@@ -170,4 +165,10 @@ ul li:nth-child(even):hover {
     height: 20px;
     margin-right: 20px;
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.title-ico {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
 }

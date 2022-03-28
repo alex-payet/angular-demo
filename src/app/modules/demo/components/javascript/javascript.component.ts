@@ -7,24 +7,23 @@ import { Component, AfterContentChecked} from '@angular/core';
 })
 export class JavascriptComponent implements AfterContentChecked {
 
-  public varJs: string = `  // How to create variables:
+  public varJs: string = `  // Création :
   var x;
   let y;
-  
-  // How to use variables:
+  const z = 5; // Non modifiable
+  // Affectation :
   x = 5;
   y = 6;
   let z = x + y;
-  document.getElementById("varJsDemo").innerHTML = z;
-  `;
+  document.getElementById("varJsDemo").innerHTML = z;`;
 
   public exJs: string = `<div id="varJsDemo">11</div>`;
 
   public fctJs: string = `function calcRectArea(width, height) {
-    return width * height;
-  }
-  document.getElementById("fctJsDemo").innerHTML = calcRectArea(10, 10);
-  `;
+  return width * height;
+}
+document.getElementById("fctJsDemo").innerHTML = calcRectArea(10, 10);`;
+
   public exfctJs: string = `<div id="fctJsDemo"></div>`;
 
   public eventJs: string = `var contenu = document.getElementById("eventJsDemo").innerHTML;

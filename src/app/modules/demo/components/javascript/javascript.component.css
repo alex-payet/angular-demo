@@ -15,11 +15,3 @@
 #eventJsDemo {
     cursor: pointer;
 }
-
-.title {
-    font-size: 20px;
-    color: #409FB3;
-    display: inline-block;
-    height: 30px!important;
-    box-shadow: 0 15px 0 -13px #5cc7a8;
-}

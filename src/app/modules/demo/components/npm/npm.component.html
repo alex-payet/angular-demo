@@ -3,14 +3,18 @@
 <div mat-dialog-content>
     <div>Quelques commandes : </div>
 
-    <pre><code [highlight]="'$ npm install (i) <package_name>'" [languages]="['bash']"></code></pre>
-    <pre><code [highlight]="'$ npm update (up) <package_name>'" [languages]="['bash']"></code></pre>
+    <pre><code [highlight]="'$ npm  ( i | install ) <package_name>'" [languages]="['bash']"></code></pre>
+    <pre><code [highlight]="'$ npm  ( up | install ) <package_name>'" [languages]="['bash']"></code></pre>
     <pre><code [highlight]="'$ npm (install | update ) -g <package_name>'" [languages]="['bash']"></code></pre>
     <pre><code [highlight]="'$ npm ls'" [languages]="['bash']"></code></pre>
 
-    <div>
-        <mat-icon color="warn">warning</mat-icon>
-        <pre><code [highlight]="'$ npm install -g @angular/cli'" [languages]="['bash']"></code></pre>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <div fxFlex="5" class="notif-ico">
+            <mat-icon color="warn">notification_important</mat-icon>
+        </div>
+        <div fxFlex="95">
+            <pre><code [highlight]="'$ npm install -g @angular/cli'" [languages]="['bash']"></code></pre>
+        </div>
     </div>
 </div>
 
