@@ -1,5 +1,5 @@
-<div class="card-face" fxLayout="column" (click)="open()">
-    <div class="title" fxFlex="20" [ngClass]="{'clickable' : topic.example}">
+<div class="card-face" [ngClass]="{'clickable' : topic.example}" fxLayout="column" (click)="open()">
+    <div class="title" fxFlex="20">
         <p>{{title}}</p>
     </div>
     <div class="info" fxFlex="80">
