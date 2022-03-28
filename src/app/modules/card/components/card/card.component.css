@@ -48,6 +48,7 @@
 .card-front {
     background-color: #bbb;
     color: black;
+    cursor: pointer;
 }
 
 .card-back {

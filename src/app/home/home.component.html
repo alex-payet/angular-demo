@@ -20,7 +20,10 @@
             </div>
             <div>
                 <mat-accordion multi>
-                    <apt-card-container *ngFor="let chapter of chapters" [chapter]="chapter"></apt-card-container>
+                    <apt-card-container 
+                      *ngFor="let chapter of chapters"
+                      [chapter]="chapter"
+                    ></apt-card-container>
                 </mat-accordion>
             </div>
 
